@@ -1,0 +1,837 @@
+/* Importar fontes do Google */
+@import url("https://fonts.googleapis.com/css2?family=Gupter:wght@400;500;700&display=swap");
+
+/* Reset e definições globais */
+*{margin: 0; padding:0; font-family: "Gupter", serif; font-size: 18px; font-weight: 400; font-style: normal;}
+
+
+
+/*--------------------------------------------------------------------HEADER*/
+
+/* ______________________________Cabeçalho */
+header {
+	background-color: #ffffff;/* Fundo branco */
+	color: #3B642F;/* Letras verdes */
+	align-items: center; /*alinha h2 e h3 no centro do centro*/
+	text-align: center;
+	display: flex;
+	justify-content: center;	
+	padding-bottom: 11px;
+	padding-top: 34px;
+}
+
+img.logo {
+	width: 13%;
+	height: auto;
+	margin-right: 10px;
+	/* Espaço entre a imagem e o título */
+}
+
+.title-h {
+    display: flex;
+    flex-direction: column;/* Alinha elementos em coluna */
+    align-items: center;
+}
+
+
+h1, 
+h2 { 
+	font-family: 'Gupter', serif;
+	font-weight: 700;
+	margin: 1px 0;
+	/* Adiciona espaço acima e abaixo dos títulos */
+	text-transform: uppercase;
+	letter-spacing: 4px;		   
+}
+
+h1 {
+	font-size: 23px;
+}
+h2 {
+	font-size: 21px;
+}
+
+
+/*--------------------------------------------------------------------NAV*/
+nav {
+    background-color: #ffffff;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+    text-transform: uppercase;
+    border-top: 1px solid #728F69;
+    /* Linha verde acima do menu de navegação */
+    border-bottom: 1px solid #728F69;
+    /* Linha verde abaixo do menu de navegação */
+    box-sizing: border-box;
+    box-shadow: rgba(50, 50, 105, 0.15) 0px 2px 5px 0px, rgba(0, 0, 0, 0.05) 0px 1px 1px 0px;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 90px; /* Espaço entre a nav e o conteúdo */
+}
+
+nav ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+nav ul li {
+    display: inline-block;
+    background-color: #ffffff;
+    position: relative;
+}
+
+nav a {
+    display: block;
+    padding: 0 17px;
+    color: #202617;
+    /* Cor do texto do menu de navegação */
+    font-size: 20px;
+    line-height: 52px;
+    height: 52px; /* Define uma altura fixa para evitar deslocamento */
+    text-decoration: none;
+    transition: color 0.3s;
+    /* Transição para a cor do texto */
+}
+
+nav a:hover, 
+nav a:focus,
+nav a:active { 	
+    color: #C4661F;/* Cor ao passar o mouse */
+}
+
+/* Fisrt level Dropdown */
+nav ul li ul li {
+    background-color: #5D734D;
+    /* Fundo do submenu */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    text-align: left;	
+    width: 240px;
+    float: none;
+    display: list-item;
+    position: relative;	
+}
+
+nav ul li ul li a {
+    color: #ffffff;
+    /* Cor do texto do menu de navegação */
+    font-size: 18px;
+}
+
+li > a:after { 
+    content: ' +'; 
+}
+
+li > a:only-child:after { 
+    content: ''; 
+}
+
+
+/* Hide Dropdowns by Default */
+nav ul ul {
+    display: none;
+    position: absolute; 
+    top: 52px; /* Ajuste para a altura do nav principal */	
+}
+
+nav ul li ul li a:hover,
+nav ul li ul li a:focus,
+nav ul li ul li a:active {
+    color: #f8f7f3;
+    /* Cor do texto ao passar o mouse */
+    border-bottom: 3px solid #ffffff;
+}
+
+/* Display Dropdowns on Hover */
+nav ul li:hover > ul {
+    display: inherit;
+}
+
+/* Ensure the submenu is displayed below the main menu */
+nav ul ul {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 1000;
+}
+
+/*-------------------------------------------------------------------- BODY*/
+
+
+body {
+	font-family: Arial, sans-serif;
+	background-color: #ffffff;
+	background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 2000 1500'%3E%3Cdefs%3E%3Crect stroke='%23ffffff' stroke-width='0.7' width='1' height='1' id='s'/%3E%3Cpattern id='a' width='3' height='3' patternUnits='userSpaceOnUse' patternTransform='rotate(109 1000 750) scale(5) translate(-800 -600)'%3E%3Cuse fill='%23fcfcfc' href='%23s' y='2'/%3E%3Cuse fill='%23fcfcfc' href='%23s' x='1' y='2'/%3E%3Cuse fill='%23fafafa' href='%23s' x='2' y='2'/%3E%3Cuse fill='%23fafafa' href='%23s'/%3E%3Cuse fill='%23f7f7f7' href='%23s' x='2'/%3E%3Cuse fill='%23f7f7f7' href='%23s' x='1' y='1'/%3E%3C/pattern%3E%3Cpattern id='b' width='7' height='11' patternUnits='userSpaceOnUse' patternTransform='rotate(109 1000 750) scale(5) translate(-800 -600)'%3E%3Cg fill='%23f5f5f5'%3E%3Cuse href='%23s'/%3E%3Cuse href='%23s' y='5' /%3E%3Cuse href='%23s' x='1' y='10'/%3E%3Cuse href='%23s' x='2' y='1'/%3E%3Cuse href='%23s' x='2' y='4'/%3E%3Cuse href='%23s' x='3' y='8'/%3E%3Cuse href='%23s' x='4' y='3'/%3E%3Cuse href='%23s' x='4' y='7'/%3E%3Cuse href='%23s' x='5' y='2'/%3E%3Cuse href='%23s' x='5' y='6'/%3E%3Cuse href='%23s' x='6' y='9'/%3E%3C/g%3E%3C/pattern%3E%3Cpattern id='h' width='5' height='13' patternUnits='userSpaceOnUse' patternTransform='rotate(109 1000 750) scale(5) translate(-800 -600)'%3E%3Cg fill='%23f5f5f5'%3E%3Cuse href='%23s' y='5'/%3E%3Cuse href='%23s' y='8'/%3E%3Cuse href='%23s' x='1' y='1'/%3E%3Cuse href='%23s' x='1' y='9'/%3E%3Cuse href='%23s' x='1' y='12'/%3E%3Cuse href='%23s' x='2'/%3E%3Cuse href='%23s' x='2' y='4'/%3E%3Cuse href='%23s' x='3' y='2'/%3E%3Cuse href='%23s' x='3' y='6'/%3E%3Cuse href='%23s' x='3' y='11'/%3E%3Cuse href='%23s' x='4' y='3'/%3E%3Cuse href='%23s' x='4' y='7'/%3E%3Cuse href='%23s' x='4' y='10'/%3E%3C/g%3E%3C/pattern%3E%3Cpattern id='c' width='17' height='13' patternUnits='userSpaceOnUse' patternTransform='rotate(109 1000 750) scale(5) translate(-800 -600)'%3E%3Cg fill='%23f2f2f2'%3E%3Cuse href='%23s' y='11'/%3E%3Cuse href='%23s' x='2' y='9'/%3E%3Cuse href='%23s' x='5' y='12'/%3E%3Cuse href='%23s' x='9' y='4'/%3E%3Cuse href='%23s' x='12' y='1'/%3E%3Cuse href='%23s' x='16' y='6'/%3E%3C/g%3E%3C/pattern%3E%3Cpattern id='d' width='19' height='17' patternUnits='userSpaceOnUse' patternTransform='rotate(109 1000 750) scale(5) translate(-800 -600)'%3E%3Cg fill='%23ffffff'%3E%3Cuse href='%23s' y='9'/%3E%3Cuse href='%23s' x='16' y='5'/%3E%3Cuse href='%23s' x='14' y='2'/%3E%3Cuse href='%23s' x='11' y='11'/%3E%3Cuse href='%23s' x='6' y='14'/%3E%3C/g%3E%3Cg fill='%23efefef'%3E%3Cuse href='%23s' x='3' y='13'/%3E%3Cuse href='%23s' x='9' y='7'/%3E%3Cuse href='%23s' x='13' y='10'/%3E%3Cuse href='%23s' x='15' y='4'/%3E%3Cuse href='%23s' x='18' y='1'/%3E%3C/g%3E%3C/pattern%3E%3Cpattern id='e' width='47' height='53' patternUnits='userSpaceOnUse' patternTransform='rotate(109 1000 750) scale(5) translate(-800 -600)'%3E%3Cg fill='%232B9101'%3E%3Cuse href='%23s' x='2' y='5'/%3E%3Cuse href='%23s' x='16' y='38'/%3E%3Cuse href='%23s' x='46' y='42'/%3E%3Cuse href='%23s' x='29' y='20'/%3E%3C/g%3E%3C/pattern%3E%3Cpattern id='f' width='59' height='71' patternUnits='userSpaceOnUse' patternTransform='rotate(109 1000 750) scale(5) translate(-800 -600)'%3E%3Cg fill='%232B9101'%3E%3Cuse href='%23s' x='33' y='13'/%3E%3Cuse href='%23s' x='27' y='54'/%3E%3Cuse href='%23s' x='55' y='55'/%3E%3C/g%3E%3C/pattern%3E%3Cpattern id='g' width='139' height='97' patternUnits='userSpaceOnUse' patternTransform='rotate(109 1000 750) scale(5) translate(-800 -600)'%3E%3Cg fill='%232B9101'%3E%3Cuse href='%23s' x='11' y='8'/%3E%3Cuse href='%23s' x='51' y='13'/%3E%3Cuse href='%23s' x='17' y='73'/%3E%3Cuse href='%23s' x='99' y='57'/%3E%3C/g%3E%3C/pattern%3E%3C/defs%3E%3Crect fill='url(%23a)' width='100%25' height='100%25'/%3E%3Crect fill='url(%23b)' width='100%25' height='100%25'/%3E%3Crect fill='url(%23h)' width='100%25' height='100%25'/%3E%3Crect fill='url(%23c)' width='100%25' height='100%25'/%3E%3Crect fill='url(%23d)' width='100%25' height='100%25'/%3E%3Crect fill='url(%23e)' width='100%25' height='100%25'/%3E%3Crect fill='url(%23f)' width='100%25' height='100%25'/%3E%3Crect fill='url(%23g)' width='100%25' height='100%25'/%3E%3C/svg%3E");
+	background-attachment: fixed;
+	background-size: cover;
+	color: #0B2625;
+	/* Letras verdes */
+}
+
+
+#section {
+	position: relative;
+	text-align: center;
+	margin-bottom: 125px;
+}
+
+h3 {
+	font-size: 34px;
+    font-weight: bold;
+    margin-bottom: 18px;
+    color: #728F69;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+
+/***************************************************      Seção inicial*/
+
+/* Define o contêiner como fundo de tela cheia */
+.background-box-inicial {
+    background: url('../img/fundo-conteudo.png') no-repeat center center/cover;
+    width: 100%;
+    min-height: 60vh; /* Garante que o fundo ocupe toda a altura da janela */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 50px;
+    box-sizing: border-box;
+}
+
+/* Estiliza o texto com fundo semitransparente */
+.texto-box-inicial {
+    font-size: 20px;
+    background-color: rgba(210, 219, 206, 0.9); /* Fundo semitransparente */
+    color: #0B2625;
+    text-align: justify;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    padding: 50px;
+    max-width: 1000px; /* Limita a largura máxima do texto */
+    margin: 0 auto; /* Centraliza o texto horizontalmente */
+}
+
+/* Ajustes responsivos */
+@media (max-width: 768px) {
+    .texto-box-inicial {
+        padding: 20px;
+        font-size: 18px;
+        margin: 0 20px; /* Margem menor para dispositivos móveis */
+    }
+}
+
+/***************************************************       MENU SA_SC*/
+table {
+    margin: 0 auto; /* Centraliza a tabela horizontalmente */
+    background-color: #728F69;
+    padding: 50px 190px 32px 190px;
+    box-sizing: border-box; /* Garante que o padding não exceda o tamanho do contêiner */
+    width: 100%;
+    /*max-width: 1200px; /* Limita a largura máxima da tabela */
+}
+
+th, td {	
+    text-align: center;
+    vertical-align: top;
+}
+
+.foto-menu-facil {
+    width: 130px; /* Define uma largura fixa para as imagens */
+    height: 130px; /* Define uma altura fixa para as imagens */
+    padding: 4px;
+    border-radius: 50%; /* Corrige o formato para ser um círculo */
+    border: 3px solid #3B642F; /* Define a borda mais larga desde o início */
+    object-fit: cover; /* Garante que a imagem mantenha a proporção e preencha o contêiner */
+    transition: border-color 0.3s, transform 0.3s; /* Transição suave para a cor da borda e transformação */
+}
+
+.foto-menu-facil:hover,
+.foto-menu-facil:focus,
+.foto-menu-facil:active {
+    border-color: #ffffff; /* Apenas altera a cor da borda no hover */
+    transform: scale(1.1); /* Aumenta levemente a imagem no hover */
+}
+
+.texto-menu-facil {
+    padding: 10px 0 50px 0; /* Ajuste padding top e bottom */
+    font-size: 20px;
+    text-align: center;
+    color: #ffffff;
+    font-family: 'Gupter', serif;
+	transition: color 0.3s; /* Adiciona uma transição suave para cor e sublinhado */
+}
+
+
+/* Ajustes para imagens responsivas */
+@media (max-width: 768px) {
+    .foto-menu-facil {
+        width: 70px;
+        height: 70px;
+        margin: 10px auto;
+    }
+
+    table {
+        padding: 30px 15px; /* Ajusta o padding para telas menores */
+    }
+}
+
+
+/***************************************************       ODS*/
+.ods-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px; /* Espaço entre as imagens */
+    flex-wrap: wrap; /* Permite que as imagens quebrem para a próxima linha se necessário */
+    width: 100%; /* Ocupa toda a largura disponível do contêiner */
+    max-width: 100%; /* Garante que não ultrapasse o tamanho do contêiner */
+    height: auto;
+    box-sizing: border-box; /* Inclui padding e border no cálculo da largura total */
+}
+
+.ods-img img {
+    max-width: 100px; /* Ajuste o tamanho conforme necessário */
+    flex-shrink: 0; /* Evita que as imagens encolham */
+    box-sizing: border-box; /* Inclui padding e border no cálculo da largura total */
+}
+
+.texto-ods {
+	font-size: 15px;
+	color: #0B2625;
+	padding: 10px;
+}
+
+/***************************************************       VINCULOS*/
+.vinculos-img {
+    display: flex; /*pra ficar um ao lado do outro*/
+    justify-content: center;
+    align-items: center;
+    gap: 40px; /* Espaço entre as imagens, ajuste conforme necessário */
+    max-width: 100%; /* Garante que não ultrapasse o tamanho do contêiner */
+    box-sizing: border-box; /* Inclui padding e border no cálculo da largura total */
+}
+
+.vinculos-img a {
+    display: block; /* Garante que os links envolvam as imagens corretamente */
+}
+
+.img-ufsc, .img-sal, .img-fapesc {
+    width: 100%;    
+    height: auto;
+    flex-shrink: 0; /* Evita que as imagens encolham */
+}
+
+.img-ufsc {
+	width: 160px;
+}
+
+.img-sal {
+	width: 205px;
+}
+
+.img-fapesc {
+	width: 138px;
+}
+
+@media (max-width: 768px) {
+    .vinculos-img {
+        gap: 20px; /* Reduz o espaço entre as imagens em telas menores */
+    }
+
+    .img-ufsc, .img-sal, .img-fapesc {
+        max-width: 120px; /* Reduz o tamanho máximo das imagens em telas menores, ajuste conforme necessário */
+    }
+}
+
+
+/* ________________________________________________________________________Rodapé */
+
+footer {
+	color: #0B2625;
+	text-align: center;
+	background-color: #ffffff;
+	background-attachment: fixed;
+	border-top: 1px solid #728f69c2;/* Linha verde acima do menu de navegação */
+	border-top-style: dashed;
+	margin-top: 120px;	/*isso é pro vazio entre o footer e o conteudo*/
+}
+
+/* Ajuste para colunas do rodapé */
+.footer-columns {
+	margin-top: 30px;
+	margin-bottom: 20px;
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+}
+
+.footer-columns section {
+	flex: 1;
+	min-width: 200px;
+	margin: 10px;
+}
+
+/* Ajuste para imagens do rodapé */
+footer img {
+	width: 10%;
+	margin-bottom: 10px;
+}
+
+/* Ajuste para ícones sociais */
+.social-icons {
+	display: flex;
+	justify-content: center;
+	gap: 30px;
+}
+
+
+/* Títulos de contato e redes sociais */
+.titulo-contato,
+.titulo-redes {
+	font-family: 'Gupter', serif;
+	font-weight: 700;
+	margin: 18px 0;
+	font-size: 20px;
+	font-weight: bolder;
+	color: #0B2625;
+}
+
+/* Texto de contato */
+.texto-email {
+	font-size: 23px;
+}
+
+.texto-endereco {
+	font-size: 20px;
+}
+
+.texto-contato {
+	color: #3B642F;
+	text-align: left;
+}
+
+#contatos a {
+	text-decoration: none;
+	color: inherit;
+}
+
+/* Direitos autorais no rodapé */
+.footer-rights {
+	margin-top: 10px;
+	padding-top: 7px;
+	padding-bottom: 7px;
+	font-size: 17px;
+	color: #ffffff;
+	background-color: #728F69;
+}
+
+/* Media queries para responsividade */
+@media (max-width: 768px) {
+	.footer-columns {
+		flex-direction: column;
+		align-items: center;
+	}
+	
+	footer img {
+		width: 5%;
+	}
+	
+	.social-icons {
+		flex-direction: row; /* Mantém os ícones em linha */
+		gap: 15px;
+	}
+	
+	.titulo-contato,
+	.titulo-redes {
+		font-size: 18px;
+	}
+	
+	.texto-email,
+	.texto-endereco {
+		font-size: 18px;
+	}
+	
+	.footer-rights {
+		font-size: 15px;
+	}
+}
+
+
+/* ________________________________________________________________________PÁGINA SOBRE O PROJETO */
+
+/* Estiliza o texto com fundo semitransparente */
+.texto-box-sobre {
+    font-size: 20px;
+    color: #0B2625;
+    text-align: justify;
+    padding: 50px;
+    max-width: 1000px; /* Limita a largura máxima do texto */
+    margin: 0 auto; /* Centraliza o texto horizontalmente */
+}
+
+
+/*********************************Colaboradores*/
+
+.conteudo-projeto-colaboradores-cordenadora{
+	display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+ 	background-color: #728F69;
+	padding: 44px;	
+}
+
+.conteudo-projeto-colaboradores {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 5px;
+ 	background-color: #D2DBCE;
+	padding: 44px 0 24px 0;	
+}
+
+.colaborador {    
+    padding: 20px;  
+    width: 30%;
+    min-width: 250px;
+    max-width: 350px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  	margin-bottom: 30px;
+}
+
+.colaborador-cordenadora{
+    padding: 20px;
+    /*width: 70%;*/
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-align: left;   
+    margin-bottom: 15px;
+}
+
+.foto-colaborador {
+  	width: 230px;
+    height: 180px;
+    /*border-radius: 80%;*/
+    margin-bottom: 10px;
+}
+
+.foto-colaborador-cordenadora{
+	width: 260px;
+    height: 210px;
+    margin-right: 5px;
+    flex-shrink: 0;
+}
+
+.info-colaborador h4 {
+    font-size: 22px;
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: #3B642F;
+}
+
+.info-colaborador-cordenadora h4 {
+	font-size: 25px;   
+    font-weight: bold;
+    color: #ffffff;
+	padding: 0px 20px;
+}
+
+.info-colaborador p {
+    font-size: 16px;
+    margin-bottom: 10px;
+    color: #3B642F;
+}
+
+.info-colaborador-cordenadora p {
+	padding: 10px 20px;
+    margin-bottom: 10px;
+    color: #D2DBCE;
+	font-family: "Roboto", Sans-serif;			
+}
+
+.cargo{
+    margin-bottom: 10px;
+    color: #ffffff;	
+	text-transform: uppercase;
+	font-size: 15px;
+}
+
+.descricao-colaborador {
+    font-size: 14px;
+    margin-bottom: 20px;
+    color: #3B642F;
+}
+
+.descricao-colaborador-cordenadora {
+	font-size: 17px;
+    margin-bottom: 20px;
+    color: #D2DBCE
+}
+
+.btn-lattes {
+    padding: 10px 20px;
+    text-decoration: none;
+}
+
+.btn-lattes:hover {
+   	text-decoration: underline; 
+}
+
+
+/***********************************recomenda*/
+
+.conteudo-projeto-recomenda {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	/* Centraliza os retângulos */
+	margin: 0 auto;
+	max-width: 1250px;
+	/* Defina um limite máximo de largura */
+	margin-bottom: 170px;
+}
+
+.site-recomendado {
+	background-color: #d2dbceb7;
+	padding: 20px;
+	border-radius: 10px;
+	width: calc(33.333% - 20px);
+	/* Três colunas, com espaçamento */
+	min-width: 250px;
+	/* Largura mínima para responsividade */
+	max-width: 350px;
+	/* Largura máxima para controle */
+	text-align: center;
+	/* Centraliza o texto dentro do retângulo */
+	display: flex;
+	flex-direction: column;
+	gap: 8px;
+	margin: 10px;
+	/* Margem horizontal e vertical */
+}
+
+.site-recomendado h4 {
+	font-size: 20px;
+	margin-bottom: 10px;
+	font-weight: bolder;
+}
+
+.site-recomendado p {
+	font-size: 16px;
+	margin-bottom: 20px;
+	flex-grow: 1;
+	color: rgb(0, 0, 0);
+}
+
+.site-recomendado .btn-visit {
+	background-color: #3b642f;
+	color: white;
+	padding: 10px;
+	border-radius: 5px;
+	text-decoration: none;
+}
+
+.site-recomendado .btn-visit:hover {
+	background-color: #2d4c24;
+}
+
+
+/* ________________________________________________________________________PÁGINA SOBRE POLICY */
+
+.box-policy-briefs {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    background-color: #D2DBCE;
+    padding: 50px;
+    padding-right: 110px;
+    padding-left: 110px;
+    text-align: justify;
+    margin-top: 58px;  
+    gap: 20px;
+}
+
+.titulocard-policy-briefs {
+    color: #3B642F;		
+    font-size: 22px;
+}
+
+.foto-policy-briefs {    
+    width: 260px;
+    height: 210px;
+    margin-right: 10px; /* Espaço entre a imagem e o texto */
+    flex-shrink: 0;
+}
+
+.descricaocard-policy-briefs {
+    font-size: 17px;
+    margin-right: 60px;
+    color: #0B2625;
+}
+
+.text-policy-briefs {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+@media (max-width: 768px) {
+    .box-policy-briefs {
+        flex-direction: column; /* Mudar para coluna em telas menores */
+        padding: 5vw; /* Ajustar padding para telas menores */
+    }
+
+    .foto-policy-briefs {
+        width: 80%; /* Ajustar largura da imagem para telas menores */
+        margin: 0 auto 3vw auto; /* Centralizar e adicionar margem abaixo */
+    }
+
+    .titulocard-policy-briefs {
+        font-size: 4vw; /* Ajustar tamanho da fonte para telas menores */
+    }
+
+    .descricaocard-policy-briefs {
+        font-size: 3vw; /* Ajustar tamanho da fonte para telas menores */
+    }
+}
+
+/* ________________________________________________________________________PÁGINA SOBRE PRODUÇÃO */
+
+#producao-bibliografica {
+    padding: 10px;		
+    margin-bottom: 80px;
+    position: relative; /* Adiciona posição relativa ao contêiner */
+}
+
+#producao-bibliografica::after {
+    content: "";
+    display: block;
+    width: 70%; /* Largura da linha */
+    height: 1px; /* Altura da linha */
+    background-color: #3B642F; /* Cor da linha */
+    margin: 0 auto; /* Centraliza a linha horizontalmente */
+    position: absolute;
+    bottom: 0; /* Posiciona a linha no fundo do contêiner */
+    left: 0;
+    right: 0;
+}
+
+#producao-bibliografica h3 {
+    text-align: center;
+    color: #3b642f;
+}
+
+#producao-bibliografica .titulo-producao-bibliografica {
+    font-size: 25px;
+    font-weight: bold;
+    color: #3b642f;
+    text-align: center;
+    margin: 0 auto;
+    padding: 0 10%;
+}
+
+#producao-bibliografica .conteudo-producao-bibliografica {
+    color: #0B2625;
+    padding: 50px;
+    text-align: justify;
+    font-family: "Roboto", Sans-serif;
+    /*background-color: #D2DBCE;*/
+}
+
+#producao-bibliografica .texto-conteudo-producao-bibliografica {
+    font-size: 15px;
+    color: #0B2625;
+    padding: 20px;
+    text-align: justify;
+    margin: 0 auto;
+    max-width: 800px;
+}
+
+b, strong {
+    font-weight: bolder;
+}
+
+/* Media Queries para responsividade */
+@media (max-width: 768px) {
+    #producao-bibliografica .titulo-producao-bibliografica {
+        font-size: 20px;
+        padding: 0 5%;
+    }
+
+    #producao-bibliografica .conteudo-producao-bibliografica {
+        padding: 20px;
+    }
+
+    #producao-bibliografica .texto-conteudo-producao-bibliografica {
+        font-size: 14px;
+        padding: 15px;
+    }
+}
+
+
+/* ________________________________________________________________________PÁGINA SOBRE BLOG */
+
+.box-postagem {
+    font-size: 18px;
+    color: #0B2625;
+    background-color: #d2dbce;
+    text-align: justify;
+    padding: 50px;
+    max-width: 800px; /* Limita a largura máxima do texto */
+    margin: -80px auto; /* Centraliza o texto horizontalmente */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.titulo-post {
+    color :#206328;
+    font-size: 26px;
+}
+
+.data-post {
+    text-align: right;
+}
+
+.img-post {
+    width: 100%;
+    min-height: 60vh; /* Garante que o fundo ocupe toda a altura da janela */   
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;  
+    margin-bottom: 20px;
+}
+
+.descricao-post {
+    font-size: 19px;   
+    color: #000000; 
+    font-weight: 400;
+    font-size: 1em;
+    line-height: 1.5;    
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+.compartilhe-post {
+    text-align: center;
+    line-height: 1.5;   
+    letter-spacing: 2px;	
+    font-size: 16px; 
+}
+
+.compartilhe-post a {
+    text-decoration: none; /* Remove a linha sob os ícones */
+}
+
+hr {
+    margin: auto; /* Centraliza a linha horizontalmente */
+    margin-bottom: 10px;    
+}
+
